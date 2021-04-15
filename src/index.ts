@@ -83,4 +83,4 @@ function encrypt(text: string) {
 	);
 }
 
-console.log(encrypt("for i,v in pairs({'hello', 'world'}) do print(v) end"));
+export default encrypt;

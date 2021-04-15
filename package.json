@@ -1,9 +1,11 @@
 {
 	"name": "sbecc",
 	"version": "1.0.0",
-	"description": "The client to rom's script builder",
-	"main": "index.js",
+	"description": "A JS implementation of the workflow for an elliptical curve cryptography oriented sandbox.",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"scripts": {
+		"prepublish": "tsc",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "romdotdog",
