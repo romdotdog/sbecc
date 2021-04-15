@@ -1,0 +1,21 @@
+{
+	"name": "sbecc",
+	"version": "1.0.0",
+	"description": "The client to rom's script builder",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "romdotdog",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^14.14.39",
+		"@types/secp256k1": "^4.0.2",
+		"typescript": "^4.2.4"
+	},
+	"dependencies": {
+		"chacha20": "^0.1.4",
+		"jssha": "^3.2.0",
+		"secp256k1": "^4.0.2"
+	}
+}
