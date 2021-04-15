@@ -1,23 +1,23 @@
 {
 	"name": "sbecc",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "A JS implementation of the workflow for an elliptical curve cryptography oriented sandbox.",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"scripts": {
-		"build": "tsc",
+		"build": "npx tsc",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "romdotdog",
 	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^14.14.39",
-		"@types/secp256k1": "^4.0.2",
-		"typescript": "^4.2.4"
+		"@types/secp256k1": "^4.0.2"
 	},
 	"dependencies": {
 		"chacha20": "^0.1.4",
 		"jssha": "^3.2.0",
-		"secp256k1": "^4.0.2"
+		"secp256k1": "^4.0.2",
+		"typescript": "^4.2.4"
 	}
 }
