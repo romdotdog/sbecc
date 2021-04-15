@@ -32,7 +32,9 @@ function getXY(combined: Uint8Array): [X: Uint8Array, Y: Uint8Array] {
 	return [combined.subarray(1, 33), combined.subarray(33, 65)];
 }
 
-function encrypt(text: string) {
+function encrypt(text: string, hex: false): Uint8Array;
+function encrypt(text: string, hex: true): string;
+function encrypt(text: string, hex: boolean = true): any {
 	const privKey = getPrivateKey();
 	const pubKey = secp256k1.publicKeyCreate(privKey, false);
 	const [pubX, pubY] = getXY(pubKey);
@@ -77,10 +79,12 @@ function encrypt(text: string) {
 	result.set(encryptedText, 76);
 
 	// https://stackoverflow.com/questions/39225161/convert-uint8array-into-hex-string-equivalent-in-node-js
-	return result.reduce(
-		(str: string, i) => str + ("0" + i.toString(16)).slice(-2),
-		""
-	);
+	return hex
+		? result.reduce(
+				(str: string, i) => str + ("0" + i.toString(16)).slice(-2),
+				""
+		  )
+		: result;
 }
 
 export default encrypt;
